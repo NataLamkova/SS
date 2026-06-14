@@ -26,7 +26,9 @@ import {
   Download,
   SignalHigh,
   Network,
-  ScanLine
+  ScanLine,
+  Newspaper,
+  CalendarDays
 } from 'lucide-react';
 import './styles.css';
 
@@ -43,6 +45,7 @@ const navItems = [
   ['Компетенции', '#capabilities'],
   ['Применения', '#applications'],
   ['Поставка', '#delivery'],
+  ['Новости', '#news'],
   ['Контакты', '#contacts']
 ];
 
@@ -173,6 +176,27 @@ const delivery = [
   'Fixed-point модель и оценка ресурсов',
   'Интеграция AXI-Stream / JESD / ADC / DAC',
   'Hardware bring-up и сопровождение испытаний'
+];
+
+const companyNews = [
+  {
+    date: '14.06.2026',
+    category: 'R&D',
+    title: 'Расширяем линейку IP-ядер для SDR-платформ',
+    text: 'В разработке новые конфигурации FFT, OFDM и цифрового front-end для задач связи, радиолокации и спектрального анализа.'
+  },
+  {
+    date: '28.05.2026',
+    category: 'FPGA',
+    title: 'Обновлен процесс верификации RTL-блоков',
+    text: 'В инженерный цикл добавлены расширенные regression-сценарии, golden vectors и проверки fixed-point моделей перед интеграцией в FPGA.'
+  },
+  {
+    date: '10.05.2026',
+    category: 'SDR',
+    title: 'Подготовлена SDR reference platform',
+    text: 'Платформа используется для bring-up, записи I/Q, оценки полосы и демонстрации многоканальных режимов MIMO.'
+  }
 ];
 
 function Header() {
@@ -425,6 +449,35 @@ function Delivery() {
   );
 }
 
+function News() {
+  return (
+    <section className="news-section" id="news">
+      <div className="section-top">
+        <div>
+          <span className="section-label">COMPANY NEWS</span>
+          <h2>Новости компании</h2>
+        </div>
+        <p>Короткие обновления о разработке IP-ядер, SDR-платформ, верификации и инженерных демонстрациях Signal Soft.</p>
+      </div>
+
+      <div className="news-grid">
+        {companyNews.map((item) => (
+          <article className="news-card" key={item.title}>
+            <div className="news-meta">
+              <span><CalendarDays size={15} /> {item.date}</span>
+              <b>{item.category}</b>
+            </div>
+            <div className="news-icon"><Newspaper size={25} /></div>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+            <a href="#contacts">Узнать подробнее <ArrowRight size={17} /></a>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Contact() {
   return (
     <section className="contact-section" id="contacts">
@@ -455,7 +508,7 @@ function Footer() {
       <div className="footer-logo"><img src="/signalsoft-logo.png" alt="Signal Soft" /></div>
       <div className="footer-statement">IP CORES / SDR ENGINEERING / FPGA & RFSOC</div>
       <div className="footer-links">
-        {navItems.slice(0, 5).map(([label, href]) => <a key={label} href={href}>{label}</a>)}
+        {navItems.slice(0, 6).map(([label, href]) => <a key={label} href={href}>{label}</a>)}
       </div>
       <div className="footer-bottom">
         <span>© 2026 Signal Soft</span>
@@ -477,6 +530,7 @@ function App() {
         <EngineeringBand />
         <Applications />
         <Delivery />
+        <News />
         <Contact />
       </main>
       <Footer />

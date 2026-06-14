@@ -1,0 +1,240 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.13.0
+2 info using node@v24.16.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\User\Documents\GitHub\SS\.npmrc
+5 silly config load:file:C:\Users\User\.npmrc
+6 silly config load:file:C:\Users\User\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install" "--cache" ".npm-cache"
+9 verbose logfile logs-max:10 dir:C:\Users\User\Documents\GitHub\SS\.npm-cache\_logs\2026-06-14T06_22_53_474Z-
+10 verbose logfile C:\Users\User\Documents\GitHub\SS\.npm-cache\_logs\2026-06-14T06_22_53_474Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+13 silly idealTree buildDeps
+14 silly reify mark retired [ 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\detect-libc' ]
+15 silly reify mark retired [ 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\fdir' ]
+16 silly reify mark retired [
+16 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\lightningcss-win32-x64-msvc'
+16 silly reify ]
+17 silly reify mark retired [
+17 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\lucide-react'
+17 silly reify ]
+18 silly reify mark retired [
+18 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\lightningcss'
+18 silly reify ]
+19 silly reify mark retired [ 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\nanoid' ]
+20 silly reify mark retired [ 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\picocolors' ]
+21 silly reify mark retired [ 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\picomatch' ]
+22 silly reify mark retired [ 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\postcss' ]
+23 silly reify mark retired [ 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\react' ]
+24 silly reify mark retired [ 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\react-dom' ]
+25 silly reify mark retired [ 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\rolldown' ]
+26 silly reify mark retired [
+26 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\source-map-js'
+26 silly reify ]
+27 silly reify mark retired [ 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\scheduler' ]
+28 silly reify mark retired [ 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\tinyglobby' ]
+29 silly reify mark retired [ 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\vite' ]
+30 silly reify mark retired [
+30 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\@oxc-project\\types'
+30 silly reify ]
+31 silly reify mark retired [
+31 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\@rolldown\\binding-win32-x64-msvc'
+31 silly reify ]
+32 silly reify mark retired [
+32 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\@rolldown\\pluginutils'
+32 silly reify ]
+33 silly reify mark retired [
+33 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\@vitejs\\plugin-react'
+33 silly reify ]
+34 silly reify moves {
+34 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\detect-libc': 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\.detect-libc-9ft6xolw',
+34 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\fdir': 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\.fdir-5OII3jDd',
+34 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\lightningcss-win32-x64-msvc': 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\.lightningcss-win32-x64-msvc-PkfUgv5U',
+34 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\lucide-react': 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\.lucide-react-nHHSToUM',
+34 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\lightningcss': 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\.lightningcss-Vurix9Lb',
+34 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\nanoid': 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\.nanoid-URydLQPL',
+34 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\picocolors': 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\.picocolors-Omydipgq',
+34 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\picomatch': 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\.picomatch-VOcE6ZGx',
+34 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\postcss': 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\.postcss-t8M3DVD4',
+34 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\react': 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\.react-dLpplGFL',
+34 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\react-dom': 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\.react-dom-NsrkKIAy',
+34 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\rolldown': 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\.rolldown-YLvVJKXV',
+34 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\source-map-js': 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\.source-map-js-UzCuHuYV',
+34 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\scheduler': 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\.scheduler-XGFRyN0A',
+34 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\tinyglobby': 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\.tinyglobby-OuNUe102',
+34 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\vite': 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\.vite-OnUDOEEp',
+34 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\@oxc-project\\types': 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\@oxc-project\\.types-gRDqlLBG',
+34 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\@rolldown\\binding-win32-x64-msvc': 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\@rolldown\\.binding-win32-x64-msvc-fEe7lkm2',
+34 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\@rolldown\\pluginutils': 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\@rolldown\\.pluginutils-PXNcwARW',
+34 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\@vitejs\\plugin-react': 'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\@vitejs\\.plugin-react-GJ08PHb4'
+34 silly reify }
+35 http fetch GET https://registry.npmjs.org/npm attempt 1 failed with EACCES
+36 silly audit bulk request {
+36 silly audit   '@emnapi/core': [ '1.10.0' ],
+36 silly audit   '@emnapi/runtime': [ '1.10.0' ],
+36 silly audit   '@emnapi/wasi-threads': [ '1.2.1' ],
+36 silly audit   '@napi-rs/wasm-runtime': [ '1.1.4' ],
+36 silly audit   '@oxc-project/types': [ '0.133.0' ],
+36 silly audit   '@rolldown/binding-android-arm64': [ '1.0.3' ],
+36 silly audit   '@rolldown/binding-darwin-arm64': [ '1.0.3' ],
+36 silly audit   '@rolldown/binding-darwin-x64': [ '1.0.3' ],
+36 silly audit   '@rolldown/binding-freebsd-x64': [ '1.0.3' ],
+36 silly audit   '@rolldown/binding-linux-arm-gnueabihf': [ '1.0.3' ],
+36 silly audit   '@rolldown/binding-linux-arm64-gnu': [ '1.0.3' ],
+36 silly audit   '@rolldown/binding-linux-arm64-musl': [ '1.0.3' ],
+36 silly audit   '@rolldown/binding-linux-ppc64-gnu': [ '1.0.3' ],
+36 silly audit   '@rolldown/binding-linux-s390x-gnu': [ '1.0.3' ],
+36 silly audit   '@rolldown/binding-linux-x64-gnu': [ '1.0.3' ],
+36 silly audit   '@rolldown/binding-linux-x64-musl': [ '1.0.3' ],
+36 silly audit   '@rolldown/binding-openharmony-arm64': [ '1.0.3' ],
+36 silly audit   '@rolldown/binding-wasm32-wasi': [ '1.0.3' ],
+36 silly audit   '@rolldown/binding-win32-arm64-msvc': [ '1.0.3' ],
+36 silly audit   '@rolldown/binding-win32-x64-msvc': [ '1.0.3' ],
+36 silly audit   '@rolldown/pluginutils': [ '1.0.1' ],
+36 silly audit   '@tybys/wasm-util': [ '0.10.2' ],
+36 silly audit   '@vitejs/plugin-react': [ '6.0.2' ],
+36 silly audit   'detect-libc': [ '2.1.2' ],
+36 silly audit   fdir: [ '6.5.0' ],
+36 silly audit   fsevents: [ '2.3.3' ],
+36 silly audit   lightningcss: [ '1.32.0' ],
+36 silly audit   'lightningcss-android-arm64': [ '1.32.0' ],
+36 silly audit   'lightningcss-darwin-arm64': [ '1.32.0' ],
+36 silly audit   'lightningcss-darwin-x64': [ '1.32.0' ],
+36 silly audit   'lightningcss-freebsd-x64': [ '1.32.0' ],
+36 silly audit   'lightningcss-linux-arm-gnueabihf': [ '1.32.0' ],
+36 silly audit   'lightningcss-linux-arm64-gnu': [ '1.32.0' ],
+36 silly audit   'lightningcss-linux-arm64-musl': [ '1.32.0' ],
+36 silly audit   'lightningcss-linux-x64-gnu': [ '1.32.0' ],
+36 silly audit   'lightningcss-linux-x64-musl': [ '1.32.0' ],
+36 silly audit   'lightningcss-win32-arm64-msvc': [ '1.32.0' ],
+36 silly audit   'lightningcss-win32-x64-msvc': [ '1.32.0' ],
+36 silly audit   'lucide-react': [ '1.17.0' ],
+36 silly audit   nanoid: [ '3.3.12' ],
+36 silly audit   picocolors: [ '1.1.1' ],
+36 silly audit   picomatch: [ '4.0.4' ],
+36 silly audit   postcss: [ '8.5.15' ],
+36 silly audit   react: [ '19.2.7' ],
+36 silly audit   'react-dom': [ '19.2.7' ],
+36 silly audit   rolldown: [ '1.0.3' ],
+36 silly audit   scheduler: [ '0.27.0' ],
+36 silly audit   'source-map-js': [ '1.2.1' ],
+36 silly audit   tinyglobby: [ '0.2.17' ],
+36 silly audit   tslib: [ '2.8.1' ],
+36 silly audit   vite: [ '8.0.16' ]
+36 silly audit }
+37 verbose audit error FetchError: request to https://registry.npmjs.org/-/npm/v1/security/advisories/bulk failed, reason: 
+37 verbose audit error     at ClientRequest.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\minipass-fetch\lib\index.js:130:14)
+37 verbose audit error     at ClientRequest.emit (node:events:509:28)
+37 verbose audit error     at emitErrorEvent (node:_http_client:109:11)
+37 verbose audit error     at _destroy (node:_http_client:993:9)
+37 verbose audit error     at onSocketNT (node:_http_client:1014:5)
+37 verbose audit error     at process.processTicksAndRejections (node:internal/process/task_queues:91:21) {
+37 verbose audit error   code: 'EACCES',
+37 verbose audit error   errno: 'EACCES',
+37 verbose audit error   type: 'system'
+37 verbose audit error }
+38 silly audit error undefined
+39 silly audit report null
+40 http cache @vitejs/plugin-react@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@vitejs/plugin-react/-/plugin-react-6.0.2.tgz 0ms (cache hit)
+41 http cache @rolldown/pluginutils@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rolldown/pluginutils/-/pluginutils-1.0.1.tgz 0ms (cache hit)
+42 http cache @oxc-project/types@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@oxc-project/types/-/types-0.133.0.tgz 0ms (cache hit)
+43 http cache @rolldown/binding-win32-x64-msvc@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rolldown/binding-win32-x64-msvc/-/binding-win32-x64-msvc-1.0.3.tgz 0ms (cache hit)
+44 http cache tinyglobby@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/tinyglobby/-/tinyglobby-0.2.17.tgz 0ms (cache hit)
+45 http cache vite@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/vite/-/vite-8.0.16.tgz 0ms (cache hit)
+46 http cache scheduler@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/scheduler/-/scheduler-0.27.0.tgz 0ms (cache hit)
+47 http cache source-map-js@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/source-map-js/-/source-map-js-1.2.1.tgz 0ms (cache hit)
+48 http cache rolldown@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/rolldown/-/rolldown-1.0.3.tgz 0ms (cache hit)
+49 http cache react-dom@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/react-dom/-/react-dom-19.2.7.tgz 0ms (cache hit)
+50 http cache react@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/react/-/react-19.2.7.tgz 0ms (cache hit)
+51 http cache postcss@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/postcss/-/postcss-8.5.15.tgz 0ms (cache hit)
+52 http cache picomatch@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/picomatch/-/picomatch-4.0.4.tgz 0ms (cache hit)
+53 http cache picocolors@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/picocolors/-/picocolors-1.1.1.tgz 0ms (cache hit)
+54 http cache nanoid@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/nanoid/-/nanoid-3.3.12.tgz 0ms (cache hit)
+55 http cache lightningcss@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/lightningcss/-/lightningcss-1.32.0.tgz 0ms (cache hit)
+56 http cache lucide-react@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/lucide-react/-/lucide-react-1.17.0.tgz 0ms (cache hit)
+57 http cache lightningcss-win32-x64-msvc@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.32.0.tgz 0ms (cache hit)
+58 silly tarball no local data for @vitejs/plugin-react@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@vitejs/plugin-react/-/plugin-react-6.0.2.tgz. Extracting by manifest.
+59 silly tarball no local data for @rolldown/pluginutils@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rolldown/pluginutils/-/pluginutils-1.0.1.tgz. Extracting by manifest.
+60 silly tarball no local data for @oxc-project/types@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@oxc-project/types/-/types-0.133.0.tgz. Extracting by manifest.
+61 silly tarball no local data for @rolldown/binding-win32-x64-msvc@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rolldown/binding-win32-x64-msvc/-/binding-win32-x64-msvc-1.0.3.tgz. Extracting by manifest.
+62 silly tarball no local data for tinyglobby@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/tinyglobby/-/tinyglobby-0.2.17.tgz. Extracting by manifest.
+63 silly tarball no local data for vite@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/vite/-/vite-8.0.16.tgz. Extracting by manifest.
+64 silly tarball no local data for scheduler@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/scheduler/-/scheduler-0.27.0.tgz. Extracting by manifest.
+65 silly tarball no local data for source-map-js@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/source-map-js/-/source-map-js-1.2.1.tgz. Extracting by manifest.
+66 silly tarball no local data for rolldown@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/rolldown/-/rolldown-1.0.3.tgz. Extracting by manifest.
+67 silly tarball no local data for react-dom@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/react-dom/-/react-dom-19.2.7.tgz. Extracting by manifest.
+68 silly tarball no local data for react@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/react/-/react-19.2.7.tgz. Extracting by manifest.
+69 silly tarball no local data for postcss@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/postcss/-/postcss-8.5.15.tgz. Extracting by manifest.
+70 silly tarball no local data for picomatch@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/picomatch/-/picomatch-4.0.4.tgz. Extracting by manifest.
+71 silly tarball no local data for picocolors@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/picocolors/-/picocolors-1.1.1.tgz. Extracting by manifest.
+72 silly tarball no local data for nanoid@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/nanoid/-/nanoid-3.3.12.tgz. Extracting by manifest.
+73 silly tarball no local data for lightningcss@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/lightningcss/-/lightningcss-1.32.0.tgz. Extracting by manifest.
+74 http cache fdir@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/fdir/-/fdir-6.5.0.tgz 0ms (cache hit)
+75 http cache detect-libc@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/detect-libc/-/detect-libc-2.1.2.tgz 0ms (cache hit)
+76 silly tarball no local data for lucide-react@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/lucide-react/-/lucide-react-1.17.0.tgz. Extracting by manifest.
+77 silly tarball no local data for lightningcss-win32-x64-msvc@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.32.0.tgz. Extracting by manifest.
+78 silly tarball no local data for fdir@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/fdir/-/fdir-6.5.0.tgz. Extracting by manifest.
+79 silly tarball no local data for detect-libc@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/detect-libc/-/detect-libc-2.1.2.tgz. Extracting by manifest.
+80 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@vitejs/plugin-react/-/plugin-react-6.0.2.tgz attempt 1 failed with EACCES
+81 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rolldown/pluginutils/-/pluginutils-1.0.1.tgz attempt 1 failed with EACCES
+82 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@oxc-project/types/-/types-0.133.0.tgz attempt 1 failed with EACCES
+83 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rolldown/binding-win32-x64-msvc/-/binding-win32-x64-msvc-1.0.3.tgz attempt 1 failed with EACCES
+84 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/tinyglobby/-/tinyglobby-0.2.17.tgz attempt 1 failed with EACCES
+85 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/vite/-/vite-8.0.16.tgz attempt 1 failed with EACCES
+86 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/scheduler/-/scheduler-0.27.0.tgz attempt 1 failed with EACCES
+87 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/source-map-js/-/source-map-js-1.2.1.tgz attempt 1 failed with EACCES
+88 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/rolldown/-/rolldown-1.0.3.tgz attempt 1 failed with EACCES
+89 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/react-dom/-/react-dom-19.2.7.tgz attempt 1 failed with EACCES
+90 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/react/-/react-19.2.7.tgz attempt 1 failed with EACCES
+91 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/postcss/-/postcss-8.5.15.tgz attempt 1 failed with EACCES
+92 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/picomatch/-/picomatch-4.0.4.tgz attempt 1 failed with EACCES
+93 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/picocolors/-/picocolors-1.1.1.tgz attempt 1 failed with EACCES
+94 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/nanoid/-/nanoid-3.3.12.tgz attempt 1 failed with EACCES
+95 http fetch GET https://registry.npmjs.org/npm attempt 2 failed with EACCES
+96 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@vitejs/plugin-react/-/plugin-react-6.0.2.tgz attempt 2 failed with EACCES
+97 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rolldown/pluginutils/-/pluginutils-1.0.1.tgz attempt 2 failed with EACCES
+98 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@oxc-project/types/-/types-0.133.0.tgz attempt 2 failed with EACCES
+99 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rolldown/binding-win32-x64-msvc/-/binding-win32-x64-msvc-1.0.3.tgz attempt 2 failed with EACCES
+100 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/tinyglobby/-/tinyglobby-0.2.17.tgz attempt 2 failed with EACCES
+101 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/vite/-/vite-8.0.16.tgz attempt 2 failed with EACCES
+102 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/scheduler/-/scheduler-0.27.0.tgz attempt 2 failed with EACCES
+103 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/source-map-js/-/source-map-js-1.2.1.tgz attempt 2 failed with EACCES
+104 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/rolldown/-/rolldown-1.0.3.tgz attempt 2 failed with EACCES
+105 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/react-dom/-/react-dom-19.2.7.tgz attempt 2 failed with EACCES
+106 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/react/-/react-19.2.7.tgz attempt 2 failed with EACCES
+107 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/postcss/-/postcss-8.5.15.tgz attempt 2 failed with EACCES
+108 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/picomatch/-/picomatch-4.0.4.tgz attempt 2 failed with EACCES
+109 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/picocolors/-/picocolors-1.1.1.tgz attempt 2 failed with EACCES
+110 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/nanoid/-/nanoid-3.3.12.tgz attempt 2 failed with EACCES
+111 http fetch GET https://registry.npmjs.org/npm attempt 3 failed with EACCES
+112 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@vitejs/plugin-react/-/plugin-react-6.0.2.tgz attempt 3 failed with EACCES
+113 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rolldown/pluginutils/-/pluginutils-1.0.1.tgz attempt 3 failed with EACCES
+114 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@oxc-project/types/-/types-0.133.0.tgz attempt 3 failed with EACCES
+115 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rolldown/binding-win32-x64-msvc/-/binding-win32-x64-msvc-1.0.3.tgz attempt 3 failed with EACCES
+116 verbose reify failed optional dependency C:\Users\User\Documents\GitHub\SS\node_modules\@rolldown\binding-win32-x64-msvc
+117 silly reify mark deleted [
+117 silly reify   'C:\\Users\\User\\Documents\\GitHub\\SS\\node_modules\\@rolldown\\binding-win32-x64-msvc'
+117 silly reify ]
+118 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/tinyglobby/-/tinyglobby-0.2.17.tgz attempt 3 failed with EACCES
+119 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/vite/-/vite-8.0.16.tgz attempt 3 failed with EACCES
+120 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/scheduler/-/scheduler-0.27.0.tgz attempt 3 failed with EACCES
+121 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/source-map-js/-/source-map-js-1.2.1.tgz attempt 3 failed with EACCES
+122 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/rolldown/-/rolldown-1.0.3.tgz attempt 3 failed with EACCES
+123 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/react-dom/-/react-dom-19.2.7.tgz attempt 3 failed with EACCES
+124 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/react/-/react-19.2.7.tgz attempt 3 failed with EACCES
+125 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/postcss/-/postcss-8.5.15.tgz attempt 3 failed with EACCES
+126 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/picomatch/-/picomatch-4.0.4.tgz attempt 3 failed with EACCES
+127 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/picocolors/-/picocolors-1.1.1.tgz attempt 3 failed with EACCES
+128 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/nanoid/-/nanoid-3.3.12.tgz attempt 3 failed with EACCES
+129 verbose cwd C:\Users\User\Documents\GitHub\SS
+130 verbose os Windows_NT 10.0.26200
+131 verbose node v24.16.0
+132 verbose npm  v11.13.0
+133 error Exit handler never called!
+134 error This is an error with npm itself. Please report this error at:
+135 error   <https://github.com/npm/cli/issues>
+136 verbose exit 1
+137 verbose code 1
+138 error A complete log of this run can be found in: C:\Users\User\Documents\GitHub\SS\.npm-cache\_logs\2026-06-14T06_22_53_474Z-debug-0.log
