@@ -180,22 +180,67 @@ const delivery = [
 
 const companyNews = [
   {
-    date: '14.06.2026',
-    category: 'R&D',
-    title: 'Расширяем линейку IP-ядер для SDR-платформ',
-    text: 'В разработке новые конфигурации FFT, OFDM и цифрового front-end для задач связи, радиолокации и спектрального анализа.'
+    date: '04.06.2026',
+    category: 'Хабр',
+    title: 'На Хабре вышла статья об алгоритмах цифрового предыскажения',
+    text: 'Опубликовано исследование алгоритмов цифрового предыскажения для LTE-сигналов на SDR-платформе РИТМ SDR USRP.',
+    href: 'https://habr.com/ru/companies/etmc_exponenta/articles/1043272/'
   },
   {
-    date: '28.05.2026',
-    category: 'FPGA',
-    title: 'Обновлен процесс верификации RTL-блоков',
-    text: 'В инженерный цикл добавлены расширенные regression-сценарии, golden vectors и проверки fixed-point моделей перед интеграцией в FPGA.'
+    date: '03.06.2026',
+    category: 'DPD',
+    title: 'Оптимизация структуры DPD-модели по метрике ACLR',
+    text: 'Подобрали структуру цифрового предыскажения с минимальной вычислительной сложностью при требуемом качестве линеаризации по ACLR.'
   },
   {
-    date: '10.05.2026',
+    date: '29.05.2026',
     category: 'SDR',
-    title: 'Подготовлена SDR reference platform',
-    text: 'Платформа используется для bring-up, записи I/Q, оценки полосы и демонстрации многоканальных режимов MIMO.'
+    title: 'Запустили Quake 1 через радиоканал',
+    text: 'Проверили OFDM-радиомодем на собственных IP-ядрах: реальный игровой трафик передавался по радиоканалу и работал в динамике.',
+    video: '/video_2026-05-29_17-07-06.mp4'
+  }
+];
+
+const legalDocs = [
+  {
+    title: 'Реквизиты оператора',
+    items: [
+      'Полное наименование: Общество с ограниченной ответственностью "СИГНАЛСОФТ"',
+      'Сокращенное наименование: ООО "СИГНАЛСОФТ"',
+      'ИНН: 5503283851',
+      'ОГРН: 1265500005957',
+      'КПП: 550301001',
+      'Дата регистрации: 01.06.2026',
+      'Юридический адрес: 644122, Омская область, г.о. Город Омск, г. Омск, ул. Орджоникидзе, д. 83 к. 1',
+      'Генеральный директор: Кащенко Игорь Евгеньевич',
+      'Email для обращений по персональным данным: hello@signalsoft.ru'
+    ]
+  },
+  {
+    title: 'Политика обработки персональных данных',
+    items: [
+      'Обрабатываются данные из формы: имя, компания, email, описание задачи, а также технические данные браузера и сервера.',
+      'Цели обработки: ответ на запрос, подготовка консультации или коммерческого предложения, ведение деловой переписки и обеспечение работы сайта.',
+      'Правовое основание: согласие пользователя, запрос пользователя до заключения договора и требования Федерального закона N 152-ФЗ.',
+      'Специальные категории персональных данных и биометрические данные через сайт не запрашиваются.'
+    ]
+  },
+  {
+    title: 'Согласие и права пользователя',
+    items: [
+      'Отправляя форму, пользователь подтверждает согласие на обработку указанных персональных данных.',
+      'Пользователь может запросить доступ, уточнение, блокирование или удаление персональных данных.',
+      'Согласие можно отозвать письмом на hello@signalsoft.ru.',
+      'Данные хранятся до достижения целей обработки или до отзыва согласия, если закон не требует больший срок.'
+    ]
+  },
+  {
+    title: 'Cookies и технические данные',
+    items: [
+      'Сайт может использовать необходимые cookies, localStorage и серверные журналы для корректной работы интерфейса и защиты сайта.',
+      'Маркетинговые cookies и рекламная аналитика не подключены. При добавлении аналитики понадобится отдельное уведомление и настройка согласия.',
+      'Продолжая пользоваться сайтом после принятия уведомления, пользователь соглашается с использованием необходимых технических данных.'
+    ]
   }
 ];
 
@@ -463,6 +508,11 @@ function News() {
       <div className="news-grid">
         {companyNews.map((item) => (
           <article className="news-card" key={item.title}>
+            {item.video && (
+              <video className="news-video" controls preload="metadata">
+                <source src={item.video} type="video/mp4" />
+              </video>
+            )}
             <div className="news-meta">
               <span><CalendarDays size={15} /> {item.date}</span>
               <b>{item.category}</b>
@@ -470,7 +520,9 @@ function News() {
             <div className="news-icon"><Newspaper size={25} /></div>
             <h3>{item.title}</h3>
             <p>{item.text}</p>
-            <a href="#contacts">Узнать подробнее <ArrowRight size={17} /></a>
+            <a href={item.href || '#contacts'} target={item.href ? '_blank' : undefined} rel={item.href ? 'noreferrer' : undefined}>
+              Узнать подробнее <ArrowRight size={17} />
+            </a>
           </article>
         ))}
       </div>
@@ -496,9 +548,73 @@ function Contact() {
         </div>
         <label>Email<input type="email" name="email" autoComplete="email" placeholder="name@company.com" required /></label>
         <label>Задача<textarea name="project" placeholder="Например: OFDM + FFT для SDR, 250 MS/s, AXI-Stream, Zynq UltraScale+, нужна верификация и bring-up." required /></label>
+        <label className="consent-field">
+          <input type="checkbox" name="privacyConsent" required />
+          <span>
+            Согласен на обработку персональных данных и ознакомлен с <a href="#legal">политикой обработки персональных данных</a>.
+          </span>
+        </label>
         <button className="button button-green" type="submit">Отправить запрос <ArrowRight size={18} /></button>
       </form>
     </section>
+  );
+}
+
+function LegalSection() {
+  return (
+    <section className="legal-section" id="legal">
+      <div className="legal-intro">
+        <span className="section-label">LEGAL INFORMATION</span>
+        <h2>Правовая информация</h2>
+        <p>
+          Раздел подготовлен для раскрытия информации об операторе, правилах обработки персональных данных,
+          согласии пользователя и использовании необходимых технических данных сайта.
+        </p>
+      </div>
+
+      <div className="legal-grid">
+        {legalDocs.map((doc) => (
+          <article className="legal-card" key={doc.title}>
+            <div className="legal-card-top">
+              <ShieldCheck size={23} />
+              <h3>{doc.title}</h3>
+            </div>
+            <ul>
+              {doc.items.map((item) => <li key={item}>{item}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+
+      <div className="legal-note">
+        <b>Источник реквизитов:</b> данные сверены по ОГРН 1265500005957 и ИНН 5503283851. Перед публикацией проверьте
+        актуальность адреса и контактного email.
+      </div>
+    </section>
+  );
+}
+
+function CookieNotice() {
+  const [accepted, setAccepted] = React.useState(() => {
+    if (typeof window === 'undefined') return true;
+    return window.localStorage.getItem('signalsoft-cookie-consent') === 'accepted';
+  });
+
+  if (accepted) return null;
+
+  const acceptCookies = () => {
+    window.localStorage.setItem('signalsoft-cookie-consent', 'accepted');
+    setAccepted(true);
+  };
+
+  return (
+    <div className="cookie-notice" role="region" aria-label="Уведомление о cookies">
+      <p>
+        Сайт использует необходимые технические данные, cookies или localStorage для корректной работы интерфейса.
+        Подробнее — в разделе <a href="#legal">правовой информации</a>.
+      </p>
+      <button className="button button-green" type="button" onClick={acceptCookies}>Понятно</button>
+    </div>
   );
 }
 
@@ -508,7 +624,8 @@ function Footer() {
       <div className="footer-logo"><img src="/signalsoft-logo.png" alt="Signal Soft" /></div>
       <div className="footer-statement">IP CORES / SDR ENGINEERING / FPGA & RFSOC</div>
       <div className="footer-links">
-        {navItems.slice(0, 6).map(([label, href]) => <a key={label} href={href}>{label}</a>)}
+        {navItems.map(([label, href]) => <a key={label} href={href}>{label}</a>)}
+        <a href="#legal">Правовая информация</a>
       </div>
       <div className="footer-bottom">
         <span>© 2026 Signal Soft</span>
@@ -532,8 +649,10 @@ function App() {
         <Delivery />
         <News />
         <Contact />
+        <LegalSection />
       </main>
       <Footer />
+      <CookieNotice />
     </>
   );
 }
