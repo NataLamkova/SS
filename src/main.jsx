@@ -28,7 +28,9 @@ import {
   Network,
   ScanLine,
   Newspaper,
-  CalendarDays
+  CalendarDays,
+  Moon,
+  Sun
 } from 'lucide-react';
 import './styles.css';
 
@@ -42,6 +44,7 @@ const assets = {
 const navItems = [
   ['IP-ядра', '#ip-cores'],
   ['SDR', '#sdr'],
+  ['ADRV', '#adrv-configurator'],
   ['Компетенции', '#capabilities'],
   ['Применения', '#applications'],
   ['Поставка', '#delivery'],
@@ -128,6 +131,33 @@ const sdrSpecs = [
   ['Архитектура', 'Zynq UltraScale+ / ADRV9009'],
   ['Канальность', 'MIMO до 8×8'],
   ['Интерфейсы', 'Ethernet / PCIe / AXI-Stream']
+];
+
+const adrvModules = [
+  {
+    id: 'adrv9009',
+    name: 'ADRV9009',
+    subtitle: '75 MHz - 6 GHz',
+    price: '$599',
+    badge: 'Wideband',
+    channels: '2T2R',
+    bandwidth: '200 MHz Rx / 450 MHz Tx',
+    sync: 'JESD204B / MCS',
+    text: 'RF-плата для MIMO, OFDM, SatCom, DPD и широкополосных SDR-экспериментов.',
+    specs: ['2 Tx / 2 Rx', '75 MHz - 6 GHz', 'DPD, CFR, DFE', 'Zynq UltraScale+ ready']
+  },
+  {
+    id: 'adrv9026',
+    name: 'ADRV9026',
+    subtitle: '650 MHz - 6 GHz',
+    price: '$899',
+    badge: 'Massive MIMO',
+    channels: '4T4R',
+    bandwidth: '200 MHz instantaneous BW',
+    sync: 'JESD204B/C',
+    text: 'Многоканальный RFIC для 4T4R-систем, phased array, base station и плотных RF-стендов.',
+    specs: ['4 Tx / 4 Rx', '650 MHz - 6 GHz', 'Integrated DPD path', 'High density RF front-end']
+  }
 ];
 
 const applications = [
@@ -250,8 +280,9 @@ const legalDocs = [
   }
 ];
 
-function Header() {
+function Header({ theme, onToggleTheme }) {
   const [open, setOpen] = React.useState(false);
+  const isLight = theme === 'light';
 
   return (
     <header className="header-shell">
@@ -268,6 +299,16 @@ function Header() {
       <a className="contact-pill" href="#contacts">
         Обсудить проект <ArrowRight size={16} />
       </a>
+
+      <button
+        className="theme-button"
+        type="button"
+        onClick={onToggleTheme}
+        aria-label={isLight ? 'Switch to dark theme' : 'Switch to light theme'}
+        title={isLight ? 'Dark theme' : 'Light theme'}
+      >
+        {isLight ? <Moon size={20} /> : <Sun size={20} />}
+      </button>
 
       <button className="menu-button" onClick={() => setOpen(!open)} aria-label="Открыть меню">
         {open ? <X size={22} /> : <Menu size={22} />}
@@ -417,6 +458,111 @@ function SdrSection() {
           ))}
         </div>
         <a className="inline-link" href="#contacts">Обсудить конфигурацию <ArrowRight size={18} /></a>
+      </div>
+    </section>
+  );
+}
+
+function AdrvConfigurator() {
+  const [selectedId, setSelectedId] = React.useState('adrv9009');
+  const selected = adrvModules.find((module) => module.id === selectedId) || adrvModules[0];
+  const basePrice = '$1,199';
+  const firmwarePrice = '$249';
+  const total = selected.id === 'adrv9026' ? '$2,347' : '$2,047';
+
+  return (
+    <section className="adrv-section" id="adrv-configurator">
+      <div className="adrv-toolbar">
+        <div>
+          <span className="section-label">SDR CONFIGURATOR</span>
+          <h2>Конфигуратор RF-платы ADRV9009 / ADRV9026</h2>
+        </div>
+        <div className="adrv-total">
+          <span>Итоговая стоимость</span>
+          <strong>{total}</strong>
+        </div>
+      </div>
+
+      <div className="adrv-configurator">
+        <aside className="adrv-options" aria-label="Выбор ВЧ платы">
+          <div className="adrv-panel-title">
+            <span>ВЧ плата</span>
+            <b>1 выбрано</b>
+          </div>
+          {adrvModules.map((module) => (
+            <button
+              className={module.id === selected.id ? 'adrv-option is-active' : 'adrv-option'}
+              type="button"
+              key={module.id}
+              onClick={() => setSelectedId(module.id)}
+            >
+              <span className="adrv-thumb"><Radio size={22} /></span>
+              <span>
+                <b>{module.name}</b>
+                <small>{module.subtitle}</small>
+              </span>
+              <strong>{module.price}</strong>
+              {module.id === selected.id ? <Check size={18} /> : <ChevronRight size={18} />}
+            </button>
+          ))}
+
+          <div className="adrv-panel-title adrv-panel-spaced">
+            <span>Прошивка</span>
+            <b>3 выбрано</b>
+          </div>
+          {['Signal Soft firmware', 'UHD E320 image', 'UHD X410 image'].map((item) => (
+            <div className="adrv-firmware" key={item}>
+              <Check size={16} />
+              <span>{item}</span>
+            </div>
+          ))}
+        </aside>
+
+        <div className="adrv-stage">
+          <div className="adrv-board-stack">
+            <div className="adrv-rf-card">
+              <span>{selected.name}</span>
+              <b>{selected.channels}</b>
+              <i />
+            </div>
+            <img
+              src={assets.sdrBoardAlt}
+              alt={`SDR платформа с ${selected.name}`}
+              loading="lazy"
+              decoding="async"
+              onError={(event) => { event.currentTarget.src = '/sdr-fallback.svg'; }}
+            />
+          </div>
+          <div className="adrv-callout">
+            <b>FMC соединение</b>
+            <span>Высокоскоростной разъем для подключения ВЧ платы</span>
+          </div>
+          <div className="adrv-controls">
+            <span><SlidersHorizontal size={17} /> Выбор RFIC</span>
+            <span><Layers3 size={17} /> Корпус</span>
+            <span><Cpu size={17} /> Прошивка</span>
+          </div>
+        </div>
+
+        <aside className="adrv-summary">
+          <h3>Конфигурация</h3>
+          <div className="adrv-summary-row"><span>Материнская плата</span><b>SDR-MB</b><strong>{basePrice}</strong></div>
+          <div className="adrv-summary-row"><span>ВЧ плата</span><b>{selected.name}</b><strong>{selected.price}</strong></div>
+          <div className="adrv-summary-row"><span>Прошивка</span><b>Signal Soft UHD</b><strong>{firmwarePrice}</strong></div>
+          <div className="adrv-summary-total"><span>Итого</span><strong>{total}</strong></div>
+          <div className="adrv-module-note">
+            <span>{selected.badge}</span>
+            <p>{selected.text}</p>
+          </div>
+          <div className="adrv-spec-grid">
+            <div><span>Каналы</span><b>{selected.channels}</b></div>
+            <div><span>Полоса</span><b>{selected.bandwidth}</b></div>
+            <div><span>Синхронизация</span><b>{selected.sync}</b></div>
+          </div>
+          <ul>
+            {selected.specs.map((spec) => <li key={spec}>{spec}</li>)}
+          </ul>
+        </aside>
       </div>
     </section>
   );
@@ -642,14 +788,33 @@ function Footer() {
 }
 
 function App() {
+  const [theme, setTheme] = React.useState(() => {
+    if (typeof window === 'undefined') return 'dark';
+    return window.localStorage.getItem('signalsoft-theme') || 'dark';
+  });
+
+  React.useEffect(() => {
+    document.title = 'Signal Soft — IP cores & SDR engineering';
+  }, []);
+
+  React.useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    window.localStorage.setItem('signalsoft-theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((currentTheme) => currentTheme === 'light' ? 'dark' : 'light');
+  };
+
   return (
     <>
-      <Header />
+      <Header theme={theme} onToggleTheme={toggleTheme} />
       <main>
         <Hero />
         <Intro />
         <IpCores />
         <SdrSection />
+        <AdrvConfigurator />
         <EngineeringBand />
         <Applications />
         <Delivery />
